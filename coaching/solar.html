@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>solar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111;
+        }
+
+        #earth {
+            width: 60px;
+            height: 60px;
+            margin: 60px;
+            background-image: url('https://i.gifer.com/3IsN.gif');
+            background-position: center;
+            position: absolute;
+            border-radius: 50%;
+            animation: earth 10s linear infinite;
+        }
+
+        @keyframes earth {
+            to {
+                transform: rotate(0deg) translate(300px);
+            }
+
+            from {
+                transform: rotate(-360deg) translate(300px);
+            }
+        }
+
+        #moon {
+            width: 40px;
+            height: 40px;
+            background: url(https://i.gifer.com/CSK.gif);
+            background-position: center;
+            position: absolute;
+            border-radius: 50%;
+            animation: moon 10s linear infinite;
+        }
+
+        @keyframes moon {
+            to {
+                transform: rotate(0deg) translate(100px);
+            }
+
+            from {
+                transform: rotate(-360deg) translate(100px);
+            }
+        }
+
+        .sun {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            background-image: url('https://i.gifer.com/Vi9w.gif');
+            border-radius: 50%;
+            transition: all 2s ease;
+            animation: sun 2s infinite ease;
+            background-position: center;
+        }
+
+        @keyframes sun {
+            0% {
+                box-shadow: 0 0 80px #FF4500;
+            }
+
+            50% {
+                box-shadow: 0 0 40px #FFD700, 0 0 80px #FFA500, 0 0 120px #FF6347, 0 0 160px #FF4500;
+            }
+
+            100% {
+                box-shadow: 0 0 80px #FF4500;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sun">
+        <div id="earth">
+            <div id="moon"></div>
+        </div>
+    </div>
+</body>
+
+</html>
