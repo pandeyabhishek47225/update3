@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance calculator</title>
+</head>
+
+<body>
+    <div class="calculate">
+        <input type="number" id="first">
+        <select>
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+        </select>
+        <input type="number" id="second">
+        <input type="button" value="=" onclick="calcu()">
+        <input type="number" value="result" id="res">
+    </div>
+</body>
+<script>
+    var a= document.getElementById("first");
+    var b= document.getElementById("second");
+    var c= document.getElementByTagname("select");
+    function calcu(){
+        var d=a.value;
+        var e=b.value;
+        var f=c.value;
+        if(f=="+")
+        {
+            var g=parseInt(d)+parseInt(e);
+        }
+        else if(f=="-")
+        {
+            var g=parseInt(d)-parseInt(e);
+        }
+        else if(f=="*")
+        {
+            var g=parseInt(d)*parseInt(e);
+        }
+        else if(f=="/")
+        {
+            var g=parseInt(d)/parseInt(e);
+        }
+        document.getElementById("res").value=g;
+    }
+</script>
+</html>
